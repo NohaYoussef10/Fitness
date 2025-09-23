@@ -1,0 +1,38 @@
+#blog{
+    text-decoration: none ;
+    font-weight:normal ;
+}
+#train{
+    text-decoration:  underline ;
+    font-weight: bold;
+}
+#blog:hover  {
+    text-decoration:  underline ;
+    font-weight: bold;
+}
+body{
+    color:rgb(12, 48, 12);
+}
+
+.coaches-txt h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: normal;
+
+}
+h1 em{
+    font-style:  italic;
+}
+.coaches-txt p{
+    max-width: 550px;
+}
+
+.coaches-txt {
+display: grid;
+    justify-content: center;
+    text-align: center;   /* ⬅️ This makes all lines center-aligned */
+    max-width: 700px;     /* prevent too wide text */
+    margin: 0 auto 50px;
+    padding: 20px 10px;
+
+}
