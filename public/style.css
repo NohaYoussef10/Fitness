@@ -1,7 +1,12 @@
 body{
     background-color: rgb(242, 255, 227);
-    margin:0 70px ;
+    margin-left:70px;
 
+    overflow-x:  hidden;
+
+}
+body::-webkit-scrollbar {
+display:none;
 }
 nav h2{
     color:rgb(16, 67, 16);
@@ -154,16 +159,66 @@ nav h2:hover{
 .chooseus h1 ,.ch-text  p {
     color:rgb(12, 48, 12);
 }
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+/*.cards::-webkit-scrollbar-thumb{*/
+
+/*    border:none;*/
+/*    background-color:rgb(12, 48, 12);*/
+/*    font-size:3rem;*/
+/*    color:white;*/
+/*    width:60px;*/
+/*    height: 60px;*/
+/*    border-radius:50%;*/
+/*    padding-bottom: 0.1em;*/
+/*    cursor: pointer;*/
+
+/*}*/
+
+.chflextext {
+    display:  flex;
+    gap:200px
+}
 .cards{
+    width: 80%;
+    overflow-x: auto;
     display: flex;
     justify-content: space-evenly ;
     gap:20px;
+    scroll-behavior: smooth;
+  -ms-overflow-style: none; scrollbar-width: none;
 
+    /* make scroll snapping nicer (optional but recommended) */
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-inline: contain; /* stops scroll chaining to body */
 }
-.chflextext {
-    display:  flex;
-    justify-content: space-between;
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+.scroll-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(12, 48, 12);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn:hover {
+    background: rgb(20, 70, 20);
+}
+
 .cards div{
     color: rgb(12, 48, 12);
     background-color: rgb(222, 247, 203);
@@ -177,12 +232,14 @@ nav h2:hover{
     flex-direction: column;     /* stack content vertically */
     justify-content: flex-start;
     align-items: flex-start;
-
+    flex:0 0 22em; /*prevent shrinkness*/
+    scroll-snap-align: start;
 }
+
 .cards div:hover {
     background-color: rgb(12, 48, 12);
     color:rgb(230, 255, 227);
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
 .cards div:hover button{
     background-color:rgb(230, 255, 227);
@@ -228,32 +285,14 @@ nav h2:hover{
 .chflextext p{
     max-width: 800px;
 }
-/*.j1{*/
-/*    top:40px;*/
-/*}*/
-/*.j2{*/
-/*    top:65px;*/
-/*}*/
-/*.j3{*/
-/*    top:40px;*/
-/*}*/
+
 .cards button{
     border-radius: 20px;
     border:none ;
     padding:10px 20px;
 }
-.scrollbtn i{
-    width:5px;
-    margin-bottom:150px;}
-#prvicon {
-    margin-right:40px;
-}
 
-#prevbtn,#nxtbtn {
-   padding:0;
 
-    background-color: transparent;
-}
 
 .last {
     background-color:rgb(222, 247, 203);
@@ -460,7 +499,7 @@ hr {
 
 
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .st-div {
         display: flex;
         align-items: center;
@@ -507,6 +546,7 @@ hr {
         box-shadow: 5px 5px;
     }
 
+
 }
 
 @media (max-width: 700px) {
@@ -535,6 +575,63 @@ hr {
     }
 }
 @media (max-width: 1100px) {
+    body{
+        margin-left:30px;
+    }
+    .cards{
+        justify-content: flex-start ;
+
+    }
+    .cards div{
+        flex: 0 0 70%; min-width: 100%; max-width: 100%;
+        justify-content:center;
+        align-items: center;
+
+    }
+    .cards div{
+
+        transition: background-color 0.5s ease, color 0.5s ease ;
+
+    }
+    .cards div:hover {
+        background-color: rgb(12, 48, 12);
+        color:rgb(230, 255, 227);
+        transform: scale(1.08);
+    }
+.cards button{
+    align-self: center;
+}
+.cards p{
+    align-self: center;
+    padding:20px 10px 70px;
+
+    font-size:x-large;
+    min-width:300px;
+
+}
+.cards i{
+
+    margin-left:30px;
+}
+.cards h2{
+    max-width: 300px;
+    font-weight: bold;
+}
+.chflextext {
+    display: grid;
+    gap:20px;
+    padding:50px;
+}
+.chflextext p{
+    max-width: 500px;
+    font-size:larger;
+}
+.chflextext button{
+
+    width:200px;
+}
+
+
     .last,.after-hr {
         display: grid;
 
@@ -564,24 +661,28 @@ hr {
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
     }
-    .cards div{
+    .cards div {
         scroll-snap-align: start;
-        flex: 0 0 250px;
+        flex: 0 0 80px;
     }
     .scrollbtn i {
         display: block;
     }
     body{
-        margin: 0;
+     margin-left:20px;
     }
     .green-sec {
         display: grid;
-        margin-top:10px;
+
+        min-width: 100vw;   /* full viewport width */
+        padding: 20px;
+margin:10px auto;
 
 
     }
     .green-sec p{
-        max-width: 200px;
+        max-width: 700px;
+        font-size: larger;
     }
     .num-div {
         display: grid;
@@ -603,11 +704,16 @@ hr {
         gap:0;
 
     }
+    .yoga p{
+        font-size:x-large  ;
+        max-width: 500px;
+    }
     .yoga img{
-        width: 320px;
-        height:320px;
+        width: 1000px;
+        height:500px;
         justify-self: center ;
         margin: 0;
+        padding-top: 20px;
 
     }
     #menu-toggle {
@@ -617,8 +723,8 @@ hr {
 }
 @media (max-width: 330px) {
     .yoga img{
-        width: 200px;
-        height:200px;
+        width:500px;
+        height:400px;
         justify-self: center ;
         margin: 0;
     }
@@ -631,5 +737,12 @@ hr {
     }
     .nav{
         gap:3px;
+    }
+}
+
+@media (max-width: 200px) {
+
+    .green-sec p{
+        font-size: x-large;
     }
 }

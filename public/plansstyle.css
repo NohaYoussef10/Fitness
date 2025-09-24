@@ -167,12 +167,13 @@ nav h2:hover{
 }
 
 .cat{
-
     display: flex;
     justify-content: space-evenly ;
 }
 .text-cont {
-    margin-top: 40px;
+    margin: 40px 0 0;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 
 .cat p{
@@ -395,12 +396,8 @@ hr {
 
 
 
-@media (max-width: 700px){
-    .classes{
-        display:grid;
-    }
-}
-@media (max-width: 550px) {
+
+@media (max-width: 600px) {
     .st-div {
         display: flex;
         align-items: center;
@@ -447,31 +444,9 @@ hr {
         box-shadow: 5px 5px;
     }
 
+
 }
-@media (max-width: 700px) {
-    .last{
-        font-size:1.5em ;
-    }
-    .classes p ,.cat p {
-        min-width: 500px;
-        font-size: 1.5em;
-    }
-    .services p{
-        min-width: 400px;
-        font-size: 1.5em;
-    }
-    nav{
-        gap:150px;
-    }
-    nav h2{
-        font-weight: bolder;
-        font-size: 3em;
-    }
-    #menu-toggle {
-        font-weight: bolder;
-        font-size: 3em;
-    }
-}
+
 @media (max-width: 255px) {
     #log{
         width:80px;
@@ -481,6 +456,20 @@ hr {
     }
 }
 @media (max-width: 1100px) {
+    .cat h2 ,  .text-cont h1{
+        font-size: 2.5em;
+        font-weight: bolder;
+    }
+    .classes{
+
+        gap:200px;
+    }
+    .classes p {
+        min-width: 200px;
+        font-size: larger;
+    }
+
+
     body{
         margin:0;
         padding: 0;
@@ -515,6 +504,10 @@ hr {
     .cat div,.text-cont h1,.cat button{
         margin: 30px;
     }
+    .cat p{
+        font-size: xx-large;
+        min-width: 600px;
+    }
     body{
         margin: 0;
     }
@@ -536,7 +529,9 @@ hr {
     }
     .discount {
         display: grid;
-        min-width: 700px;
+        min-width: 1100px;
+
+
     }
     .discount button {
         margin-bottom: 20px;
@@ -546,7 +541,48 @@ hr {
         height: 20em;
     }
 }
+@media (max-width: 700px) {
+    .cat p{
+        font-size: xx-large;
+    }
+    .classes{
+        display:grid;
+        gap:10px;
+    }
+    .discount {
+        display: grid;
+        min-width: 700px;
+
+    }
+    .last{
+        font-size:1.5em ;
+    }
+    .classes p ,.cat p {
+        min-width: 500px;
+        font-size: 1.5em;
+    }
+    .services p{
+        min-width: 400px;
+        font-size: 1.5em;
+    }
+    nav{
+        gap:150px;
+    }
+    nav h2{
+        font-weight: bolder;
+        font-size: 3em;
+    }
+    #menu-toggle {
+        font-weight: bolder;
+        font-size: 3em;
+    }
+}
 @media (max-width: 330px) {
+    .discount {
+        display: grid;
+        min-width: 600px;
+
+    }
     .after-hr {
         margin-left:30px;
     }
@@ -573,4 +609,14 @@ hr {
     .nav{
         gap:3px;
     }
+
+}
+@media (max-width: 400px) {
+    .discount {
+        display: grid;
+        min-width: 600px;
+
+    }
+
+
 }
