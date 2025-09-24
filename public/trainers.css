@@ -36,3 +36,29 @@ display: grid;
     padding: 20px 10px;
 
 }
+@media (max-width: 500px) {
+    body{
+        margin:0;
+    }
+    #log {
+        background-color:rgb(230, 255, 227);
+        color:rgb(16, 67, 16);
+        border-radius:  20px;
+        border:rgb(16, 67, 16)solid 1px;
+        font-weight: bold;
+        transition: 0.2s;
+        margin-right:  30px;
+        margin-left:  10px;
+        min-width: 70px;
+        height:60px;
+        padding:0 25px;
+
+
+    }
+    nav h2{
+        font-size: 2em;
+    }
+    #menu-toggle {
+        font-size: 2em;
+    }
+}
