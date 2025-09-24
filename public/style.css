@@ -554,27 +554,18 @@ hr {
         font-size:1.5em ;
     }}
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 255px) {
-    #log{
-        width:80px;
-        height:80px;
-        text-align: left ;
-        margin-right:  0;
-    }
-}
+/*@media (max-width: 255px) {*/
+/*    #log{*/
+/*        width:80px;*/
+/*        height:80px;*/
+/*        text-align: left ;*/
+/*        margin-right:  0;*/
+/*    }*/
+/*}*/
 @media (max-width: 1100px) {
+    /*.yoga h1{*/
+    /*    min-width: 700px;*/
+    /*}*/
     body{
         margin-left:30px;
     }
@@ -673,16 +664,14 @@ hr {
     }
     .green-sec {
         display: grid;
-
         min-width: 100vw;   /* full viewport width */
         padding: 20px;
 margin:10px auto;
-
-
     }
     .green-sec p{
         max-width: 700px;
-        font-size: larger;
+        font-size: 2em;
+
     }
     .num-div {
         display: grid;
@@ -731,18 +720,62 @@ margin:10px auto;
     .yoga h1{
         font-size: 2.5em;
     }
-    #log{
-        justify-self: left  ;
-        margin-right: 0;
-    }
+    /*#log{*/
+    /*    justify-self: flex-end ;*/
+    /*    align-self: flex-end;*/
+    /*    margin-left:200px;*/
+    /*    min-width: 150px;*/
+    /*    padding: 20px 50px;*/
+    /*}*/
+
     .nav{
         gap:3px;
     }
 }
 
-@media (max-width: 200px) {
-
-    .green-sec p{
-        font-size: x-large;
+@media (max-width: 500px) {
+.cards div{
+    flex: 0 0 100px;
+}
+    .green-sec {
+        min-width: 600px;
     }
+    .yoga p{
+        min-width: 600px;
+    }
+ .chooseus p{
+     font-size: x-large;
+ }
+ .ch-text  h1{
+     font-size: 3em;
+
+ }
+ .ch-text {
+gap:3px;
+ }
+ .yoga button {
+     font-size: 1.5em;
+ }
+ button{
+     font-size: 1em;
+ }
+ #cj{ font-size: 1.5em;}
+ #log{
+     justify-self: flex-end ;
+     align-self: flex-end;
+     margin-left:200px;
+     min-width: 150px;
+     padding: 0 50px;
+     width:80px;
+     height:80px;
+     text-align: left ;
+     margin-right:  0;
+ }
+ nav h2{
+     font-size: 3em;
+ }
+ #menu-toggle {
+     font-size: 3em;
+ }
+
 }
