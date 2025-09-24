@@ -397,7 +397,7 @@ hr {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
     .st-div {
         display: flex;
         align-items: center;
@@ -411,14 +411,17 @@ hr {
         display: none;
         flex-direction: column;
         margin-top: 20px;
-        font-size: xx-large;
         background: #f0ffe6;
         position: absolute;
-        top: 60px;
+        font-size: 4em;
+        top: 80px;
         left: 20px;
-        width: 170px;
+        width: 300px;
         padding: 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        text-align: center ;
+        z-index: 1000;
     }
 
     .nav-links.show {
@@ -432,8 +435,18 @@ hr {
         background: none;
         border: none;
         cursor: pointer;
+        margin-right: 2px;
         color: rgb(16, 67, 16);
-    }
+
+        border-radius: 15px;
+    }.menu-toggle:hover{
+         background-color: rgb(12, 48, 12);
+
+         color:rgb(230, 255, 227);
+     }
+
+
+
     #log{
         margin-right:  0;
     }

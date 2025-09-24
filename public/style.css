@@ -515,12 +515,16 @@ hr {
             margin-top: 20px;
             background: #f0ffe6;
             position: absolute;
-            font-size: larger;
+            font-size: 3em;
             top: 60px;
-            left: 20px;
-            width: 120px;
+            left: 10px;
+            width: 250px;
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center ;
+            /*height:500px;*/
+            z-index: 1000;
         }
 
         .nav-links.show {
@@ -535,7 +539,13 @@ hr {
             border: none;
             cursor: pointer;
             color: rgb(16, 67, 16);
-        }
+            margin-right: 2px;
+            border-radius: 15px;
+        }.menu-toggle:hover{
+                     background-color: rgb(12, 48, 12);
+
+                     color:rgb(230, 255, 227);
+                 }
         #log{
             margin-right:  0;
         }
@@ -666,7 +676,7 @@ hr {
         display: grid;
         min-width: 100vw;   /* full viewport width */
         padding: 20px;
-margin:10px auto;
+        margin:10px auto;
     }
     .green-sec p{
         max-width: 700px;
@@ -777,5 +787,6 @@ gap:3px;
  #menu-toggle {
      font-size: 3em;
  }
+
 
 }
